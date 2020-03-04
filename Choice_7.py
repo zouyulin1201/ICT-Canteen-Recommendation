@@ -1,0 +1,41 @@
+import pygame
+pygame.init()
+
+introscreenimage = pygame.image.load("newmap.jpg")
+screen = pygame.display.set_mode((1221, 862))
+font = pygame.font.SysFont("monospace", 20)
+text2 = font.render("Canteen 2", True, (0, 0, 0),(255,255,255))
+text1 = font.render("Canteen 1", True, (0, 0, 0),(255,255,255))
+text3 = font.render("Canteen 4", True, (0, 0, 0),(255,255,255))
+text4 = font.render("Canteen 9", True, (0, 0, 0),(255,255,255))
+text5 = font.render("Canteen 11", True, (0, 0, 0),(255,255,255))
+text6 = font.render("Canteen 13", True, (0, 0, 0),(255,255,255))
+text7 = font.render("Canteen 14", True, (0, 0, 0),(255,255,255))
+text8 = font.render("Canteen 16", True, (0, 0, 0),(255,255,255))
+text9 = font.render("Canteen A", True, (0, 0, 0),(255,255,255))
+text10 = font.render("Canteen B", True, (0, 0, 0),(255,255,255))
+text11 = font.render("Canteen C", True, (0, 0, 0),(255,255,255))
+text12 = font.render("Pioneer Canteen", True, (0, 0, 0),(255,255,255))
+text13 = font.render("Nanyang Crescent", True, (0, 0, 0),(255,255,255))
+pygame.display.set_caption("NTU map")
+screen.blit(introscreenimage, (0, 0))
+screen.blit(text1, (686, 631))
+screen.blit(text2, (755, 515))
+screen.blit(text3, (518, 733))
+screen.blit(text4, (976, 294))
+screen.blit(text5, (1140, 211))
+screen.blit(text6, (690, 92))
+screen.blit(text7, (822, 102))
+screen.blit(text8, (613, 173))
+screen.blit(text9, (352, 304))
+screen.blit(text10, (256, 673))
+screen.blit(text11, (222, 387))
+screen.blit(text12, (795, 793))
+screen.blit(text13, (1040, 125))
+pygame.display.flip()
+crashed = False
+while not crashed:
+    for event in pygame.event.get():  # get events
+        if event.type == pygame.QUIT:
+            crashed = True            # quit
+pygame.quit()
